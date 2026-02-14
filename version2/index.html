@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hard-Retro Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="iphone">
+    <div class="notch"></div>
+
+    <div class="screen">
+        <div class="app-content">
+
+            <!-- LOGIN -->
+            <div id="loginScreen">
+                <div class="app-header">
+                    <h2>Hard-Retro Shop</h2>
+                    <p>Inicia sesión</p>
+                </div>
+
+                <div class="form">
+                    <input type="email" id="loginEmail" placeholder="Correo electrónico" autocomplete="off">
+                    <input type="password" id="loginPass" placeholder="Contraseña" autocomplete="off">
+                    <button onclick="login()">Entrar</button>
+                    <button onclick="showRegister()">Crear Cuenta</button>
+                    <p id="loginError" class="error"></p>
+                </div>
+            </div>
+
+            <!-- REGISTRO -->
+            <div id="registerScreen" style="display:none;">
+                <div class="app-header">
+                    <h2>Registro</h2>
+                </div>
+
+                <div class="form">
+                    <input type="text" id="regName" placeholder="Nombre de usuario" autocomplete="off">
+                    <input type="email" id="regEmail" placeholder="Correo electrónico" autocomplete="off">
+                    <input type="password" id="regPass" placeholder="Contraseña" autocomplete="off">
+                    <button onclick="register()">Registrar</button>
+                    <button onclick="showLogin()">Volver</button>
+                    <p id="registerMessage" class="error"></p>
+                </div>
+            </div>
+
+            <!-- CATALOGO -->
+            <div id="catalogScreen" style="display:none;">
+
+                <div class="top-bar">
+                    <button class="cart-icon" onclick="showCart()">🛒</button>
+                    <button onclick="logout()">Cerrar Sesión</button>
+                </div>
+
+                <div class="productos">
+
+                    <div class="producto">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Super_Mario_Bros._box.png">
+                        <h4>Super Mario Bros</h4>
+                        <p>$500</p>
+                        <button onclick="addToCart('Super Mario Bros',500)">Agregar</button>
+                    </div>
+
+                    <div class="producto">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNDNjNTI4MzMtODVkNi00YmUzLTkxMDQtY2NiNDczMjFkMTEyXkEyXkFqcGc@._V1_.jpg">
+                        <h4>Zelda Ocarina</h4>
+                        <p>$800</p>
+                        <button onclick="addToCart('Zelda Ocarina',800)">Agregar</button>
+                    </div>
+
+                    <div class="producto">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTVmY2I1YjctMDMwMS00OWFmLWFiNDktMTk2ZDljZDIzYTg4XkEyXkFqcGc@._V1_.jpg">
+                        <h4>Street Fighter II</h4>
+                        <p>$600</p>
+                        <button onclick="addToCart('Street Fighter II',600)">Agregar</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CARRITO -->
+            <div id="cartScreen" style="display:none;">
+                <div class="app-header">
+                    <h2>Carrito 🛒</h2>
+                </div>
+
+                <div class="form">
+                    <ul id="cartList"></ul>
+                    <h3>Total: $<span id="total">0</span></h3>
+
+                    <h4 style="color:#00f2ff;">Datos de pago</h4>
+
+                    <input type="text"
+                           id="cardNumber"
+                           placeholder="Número de tarjeta (16 dígitos)"
+                           maxlength="16"
+                           autocomplete="off">
+
+                    <input type="text"
+                           id="cardName"
+                           placeholder="Nombre en la tarjeta"
+                           autocomplete="off">
+
+                    <input type="text"
+                           id="cardType"
+                           placeholder="Crédito o Débito"
+                           autocomplete="off">
+
+                    <input type="password"
+                           id="cvv"
+                           placeholder="CVV (3 dígitos)"
+                           maxlength="3"
+                           autocomplete="off">
+
+                    <button onclick="pay()">Pagar</button>
+                    <button onclick="showCatalog()">Volver</button>
+
+                    <p id="paymentMessage" class="error"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
