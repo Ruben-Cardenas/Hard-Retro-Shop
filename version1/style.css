@@ -8,8 +8,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-
-
 .iphone {
     width: 390px;
     height: 800px;
@@ -19,7 +17,6 @@ body {
     box-shadow: 0 0 40px rgba(0,0,0,0.9);
     position: relative;
 }
-
 
 .notch {
     position: absolute;
@@ -33,7 +30,6 @@ body {
     z-index: 10;
 }
 
-
 .screen {
     width: 100%;
     height: 100%;
@@ -46,7 +42,6 @@ body {
     padding-top: 70px;
     box-sizing: border-box;
 }
-
 
 .app-content {
     padding: 20px;
@@ -95,7 +90,6 @@ body {
     box-shadow: 0 0 10px #00f2ff;
     background: rgba(0, 242, 255, 0.1);
 }
-
 
 .form button {
     width: 85%;

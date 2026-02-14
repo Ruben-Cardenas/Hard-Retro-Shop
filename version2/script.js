@@ -98,7 +98,7 @@ function logout(){
 
 function addToCart(name, price){
     cart.push({name, price});
-    renderCart(); // 🔥 ACTUALIZA TOTAL INMEDIATAMENTE
+    renderCart(); 
     alert("Agregado al carrito 🎮");
 }
 

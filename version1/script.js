@@ -1,8 +1,7 @@
-// Escucha el evento cuando el usuario intenta enviar el formulario
-document.getElementById("registroForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // Evita que la página se recargue
 
-    // Se obtienen todos los valores del formulario
+document.getElementById("registroForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
     let nombre = document.getElementById("nombre").value;
     let usuario = document.getElementById("usuario").value;
     let correo = document.getElementById("correo").value;
@@ -16,7 +15,6 @@ document.getElementById("registroForm").addEventListener("submit", function(e) {
         document.getElementById("mensajeError").innerText = "Error en el formulario";
         return;
     }
-
 
     if (password !== confirmPassword) {
         document.getElementById("mensajeError").innerText = "Error en el formulario";
